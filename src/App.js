@@ -1,23 +1,25 @@
 import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import SearchBar from "./components/RecipeCard";
+import RecipeCard from"./components/RecipeCard";
+
+const apiUrl ="www.themealdb.com/api/json/v1/1/search.php?s=";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [query, setQuery] = useState("");
+  const [recipes, setRecipes] = useState([]);
+
+const searchRecipes = async () => {
+  setIsLoading(true);
+  const url = apiUrl + query
+};
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h2>Our Recipe App</h2>
+
     </div>
   );
 }
