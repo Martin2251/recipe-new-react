@@ -9,6 +9,7 @@ function App() {
   const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   
+  
   // search for the recipe
   const searchRecipes = async () => {
     setIsLoading(true);
@@ -20,7 +21,8 @@ function App() {
   };
 
   useEffect(() => {
-    searchRecipes()
+    searchRecipes();
+// eslint-disable-next-line
   }, []);
 
   const handleSubmit = (event) => {
